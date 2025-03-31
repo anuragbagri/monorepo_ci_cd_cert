@@ -1,0 +1,26 @@
+name: Deploy to staging
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  redeploy_everything:
+    name: Deploying everything to staging
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy and Restart Services
+        uses: appleboy/ssh-action@v1
+        with:
+          host: 10.10.10.10
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd monorepo_ci_cd_cert
+            git pull
+            pnpm install
+            pnpm run build
+            pm2 restart http-backend
+            pm2 restart ws-backend
+            pm2 restart frontend
