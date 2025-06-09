@@ -21,11 +21,6 @@ This repo is mainly for practice and testing, nothing too fancy (yet 😎). Here
 - Learning to generate and renew SSL certificates using **Let's Encrypt** + **Certbot**.
 - Using Nginx for SSL termination.
 
-### 🌀 PM2
-
-- Using **PM2** to manage Node.js processes.
-- Helps keep stuff running even after crashes or restarts.
-
 ### 🌐 Nginx
 
 - Reverse proxy setup using **Nginx**.
