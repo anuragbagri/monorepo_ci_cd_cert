@@ -25,7 +25,13 @@ This repo is mainly for practice and testing, nothing too fancy (yet 😎). Here
 
 - Reverse proxy setup using **Nginx**.
 - Handles SSL and routes traffic to PM2-managed services.
+  
+### pm2 
 
+- process manager
+- restarts the process if there is any crash
+
+ 
 ## 🧪 Just for Study!
 
 This monorepo is purely for **learning and testing purposes** — not production-grade (yet 😉).
